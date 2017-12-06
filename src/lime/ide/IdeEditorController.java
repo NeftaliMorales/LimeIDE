@@ -8,7 +8,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 import org.fxmisc.richtext.*;
 
 public class IdeEditorController implements Initializable {
@@ -19,6 +18,7 @@ public class IdeEditorController implements Initializable {
     @FXML Button bBorrarHoja;
     private String nombreP;
     private String rutaP;
+    private static Proyecto proy;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -47,10 +47,6 @@ public class IdeEditorController implements Initializable {
         tabs.getTabs().remove(index);
     }
     public static void setProyecto(Proyecto a){
-        Proyecto proyecto = a;
-    }
-    private void nombreVentana(){
-        Stage stage = (Stage) apMain.getScene().getWindow();
-        stage.setTitle("LimeIDE - " + nombreP);
+        proy = a;        
     }
 }

@@ -1,5 +1,6 @@
 package lime.ide;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -23,8 +24,8 @@ public class CrearProyectoUIController implements Initializable {
     @FXML private TextField tfNombre;
     @FXML private TextField tfRuta;
     
-    String rutaProyecto = tfRuta.getText();
-    String nombreProyecto = tfNombre.getText();
+    String rutaProyecto;
+    String nombreProyecto;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -38,8 +39,7 @@ public class CrearProyectoUIController implements Initializable {
         bCrear.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                crear();
-                cerrar();
+                crearProyecto();
             }
         });
     }    
@@ -64,7 +64,6 @@ public class CrearProyectoUIController implements Initializable {
     
     private void crear(){
         try {
-            crearProyecto();
             String idioma = LimeIDE.getIdioma();
             ResourceBundle bundle = ResourceBundle.getBundle(idioma);
             Parent root = FXMLLoader.load(getClass().getResource("IdeEditor.fxml"), bundle);
@@ -76,7 +75,7 @@ public class CrearProyectoUIController implements Initializable {
             stage.setScene(scene);
             //stage.setResizable(false);
             stage.setMaximized(true);
-            //stage.setTitle("LimeIDE - " + nombreProyecto);
+            stage.setTitle("LimeIDE - " + nombreProyecto);
             stage.show();
         } catch (IOException ex) {
             Logger.getLogger(InicioSesionUIController.class.getName()).log(Level.SEVERE, null, ex);
@@ -89,13 +88,18 @@ public class CrearProyectoUIController implements Initializable {
     }
     
     private void crearProyecto(){
+        rutaProyecto = tfRuta.getText();
+        nombreProyecto = tfNombre.getText();
         if(nombreProyecto.equals("") || rutaProyecto.equals("")){
             JOptionPane.showMessageDialog(null, "Completa los campos");
         }
         else{
             Proyecto proyecto = new Proyecto(rutaProyecto, nombreProyecto);
             IdeEditorController.setProyecto(proyecto);
-            proyecto.mkdirs();
+            File direc = new File(rutaProyecto + nombreProyecto);
+            direc.mkdirs();
+            crear();
+            cerrar();
         }
     }
 }

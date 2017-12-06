@@ -1,5 +1,6 @@
 package lime.ide;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -13,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
 /**
@@ -24,9 +26,11 @@ public class AbrirProyectoUIController implements Initializable {
 
     @FXML Button bNuevoProyecto;
     @FXML MenuItem miCerrarSesion;
+    @FXML FlowPane fpProyectos;
      
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        buscarProyectos();
         bNuevoProyecto.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -47,7 +51,6 @@ public class AbrirProyectoUIController implements Initializable {
             String idioma = LimeIDE.getIdioma();
             ResourceBundle bundle = ResourceBundle.getBundle(idioma);
             Parent root = FXMLLoader.load(getClass().getResource("CrearProyectoUI.fxml"), bundle);
-            
             Stage stage = new Stage();
             
             Scene scene = new Scene(root);
@@ -81,5 +84,16 @@ public class AbrirProyectoUIController implements Initializable {
        } catch (IOException ex) {
            Logger.getLogger(InicioSesionUIController.class.getName()).log(Level.SEVERE, null, ex);
        }
+    }
+    private void buscarProyectos(){
+        File carpetaIde = new File("c:\\LimeIDE Proyectos\\");
+        if(carpetaIde.exists()){
+            File[] proyectos = carpetaIde.listFiles();
+            for (File proyecto : proyectos) {
+                Button proy = new Button(proyecto.getName());
+                proy.getStyleClass().add("bProyecto");
+                fpProyectos.getChildren().add(proy);
+            }
+        }
     }
 }

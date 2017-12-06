@@ -1,14 +1,11 @@
 package lime.ide;
 
-import java.io.File;
-
-public class Proyecto extends File{
+public class Proyecto{
     
     private String rutaProyecto;
     private String nombreProyecto;
     
     public Proyecto(String rutaP, String nombreP) {
-        super(rutaP);
         this.nombreProyecto = nombreP;
         this.rutaProyecto = rutaP;
     }
