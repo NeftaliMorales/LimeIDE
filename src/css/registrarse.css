@@ -1,0 +1,30 @@
+AnchorPane{
+    -fx-background-color: #D4FFD4;
+}
+Label{
+    -fx-font-size: 13px;
+}
+TextField{
+    -fx-background-color: RGB(124, 252, 0);
+    -fx-border-color: #32CD32;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+}
+PasswordField{
+    -fx-background-color: RGB(124, 252, 0);
+    -fx-border-color: #32CD32;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+}
+#bRegistrarse{
+    -fx-background-color: #32CD32;
+    -fx-font-size: 20px;
+}
+
+#bRegistrarse:hover{
+    -fx-background-color: #228B22;
+}
+
+#lCreaCuenta{
+    -fx-font-size: 20px;
+}

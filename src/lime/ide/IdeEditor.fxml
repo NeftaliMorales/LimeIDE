@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.fxmisc.richtext.*?>
+
+<AnchorPane id="AnchorPane" fx:id="apMain" prefHeight="705.0" prefWidth="1288.0" stylesheets="@../../css/ideEditor.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lime.ide.IdeEditorController">
+   <children>
+      <BorderPane prefHeight="705.0" prefWidth="1363.0">
+         <left>
+            <TreeView prefHeight="610.0" prefWidth="194.0" BorderPane.alignment="CENTER" />
+         </left>
+         <bottom>
+            <Pane prefHeight="138.0" prefWidth="835.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <TabPane fx:id="tabs" prefHeight="467.0" prefWidth="1135.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <Pane maxHeight="-Infinity" prefHeight="100.0" prefWidth="1367.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="bNuevaHoja" layoutY="67.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0">
+                     <graphic>
+                        <ImageView fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/edson/Documents/NetBeansProjects/Lime%20IDE/imagenes/nuevaPagina.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="bBorrarHoja" layoutX="33.0" layoutY="67.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0">
+                     <graphic>
+                        <ImageView fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/edson/Documents/NetBeansProjects/Lime%20IDE/imagenes/borrarPagina.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

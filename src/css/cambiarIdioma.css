@@ -1,0 +1,12 @@
+AnchorPane{
+    -fx-background-color: #D4FFD4;
+}
+Label{
+    -fx-font-size: 15px;
+}
+Button{
+    -fx-background-color: #32CD32;
+}
+Button:hover{
+    -fx-background-color: #228B22;
+}

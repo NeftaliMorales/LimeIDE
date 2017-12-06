@@ -1,0 +1,50 @@
+AnchorPane{
+    -fx-background-color: #D4FFD4;
+}
+
+#bConfig{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-border-color: #32CD32;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+}
+
+#bConfig:hover{
+    -fx-background-color: #AAFFAA;
+}
+
+#bIniciarSesion{
+    -fx-background-color: #32CD32;
+}
+
+#bIniciarSesion:hover{
+    -fx-background-color: #228B22;
+}
+
+#bRegistrarse{
+    -fx-background-color: #32CD32;
+}
+
+#bRegistrarse:hover{
+    -fx-background-color: #228B22;
+}
+
+#lUser{
+    -fx-font-size: 13px;
+}
+#tfUser{
+    -fx-background-color: RGB(124, 252, 0);
+    -fx-border-color: #32CD32;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+}
+
+#lPass{
+        -fx-font-size: 13px;
+}
+#pfPass{
+    -fx-background-color: RGB(124, 252, 0);
+    -fx-border-color: #32CD32;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+}

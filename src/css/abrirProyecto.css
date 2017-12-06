@@ -1,0 +1,20 @@
+AnchorPane{
+    -fx-background-color: #D4FFD4;
+}
+Button{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-border-color: #32CD32;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+}
+Button:hover{
+    -fx-background-color: #AAFFAA;
+}
+#lCrearP{
+    -fx-font-size: 15px;
+}
+
+MenuBar{
+    -fx-background-color: #D4FFD4;
+    -fx-font-size: 15px; 
+}

@@ -1,0 +1,37 @@
+AnchorPane{
+    -fx-background-color: #D4FFD4;
+}
+
+TextField{
+    -fx-background-color: RGB(124, 252, 0);
+    -fx-border-color: #32CD32;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+}
+
+#bLupa{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-border-color: #32CD32;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+}
+#bLupa:hover{
+    -fx-background-color: #AAFFAA;
+}
+
+Label{
+    -fx-font-size: 14px;
+}
+
+#bCrearP{
+    -fx-background-color: #32CD32;
+    -fx-font-size:16px; 
+}
+
+#bCrearP:hover{
+    -fx-background-color: #228B22;
+}
+
+#bAtras{
+    -fx-background-color: rgba(0,0,0,0);
+}
